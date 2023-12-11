@@ -12,7 +12,7 @@ export class UsersSagas {
   userCreated = (events$: Observable<any>): Observable<ICommand> => {
     return events$.pipe(
       ofType(UserCreatedEvent),
-      delay(1000),
+      delay(5000),
       map((event) => {
         console.log('Inside [UserSagas] Saga ' + 'for example send a email');
         console.log(event.userId);
